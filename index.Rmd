@@ -10,8 +10,9 @@ output:
 Welcome to the personal website of Matthew Spotnitz, MD, MPH.
 
 # Link to another websites
-
+Here is a link to a great data science course.
 • [p8105](https://www.p8105.com) 
 
 # Link to a page wthin the site
+Here is a link to my biosketch.
 • [about me](about.html)
