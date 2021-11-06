@@ -7,4 +7,61 @@ output:
     theme: cerulean
 ---
 
-# Ths will provide more information about Matt.
+##Here are parts of my NIH Biosktech:
+
+
+A.	Personal Statement
+
+I am the National Library of Medicine (NLM) fellow in the Department of Biomedical Informatics at Columbia University Irving Medical Center.  My long-term career goal is to be an independent scientist who investigates cervical cancer risk from intrauterine device (IUD) use.  I am a physician scientist with clinical experience in General Surgery and Diagnostic Radiology.  I have an MPH from the Harvard-Chan School of Public health and am pursuing an MA in Biomedical Informatics at Columbia University concurrently to my fellowship.  My combined experiences in medicine, chemistry, public health and informatics are well suited for my long-term goal. One formative experience that encouraged me to become a scientist in informatics was my success as a lead investigator of a study about the relative risk of high-grade cervical neoplasms among copper and levonorgestrel-releasing intrauterine device users, which I pursued as a postdoctoral scientist in the Department of Biomedical Informatics (DBMI) [1]. That study found that copper intrauterine device users had a lower relative risk of high-grade cervical neoplasms compared to levonorgestrel-releasing intrauterine system users, which has implications for the health of women worldwide.  With additional training in informatics, and continued mentorship from Dr. Natarajan, I aspire to be an independent physician scientist who uses retrospective and prospective data to investigate the effects of IUD use on cervical cancer. 
+
+[1] Spotnitz ME, Natarajan K, Ryan PB, Westhoff CL. Relative Risk of Cervical Neoplasms Among Copper and Levonorgestrel-Releasing Intrauterine Device Users. Obstet Gynecol (2020); 135(2):319-327.
+
+B.	Positions, Scientific Appointments, and Honors
+2020-Present 			National Library of Medicine Postdoctoral Fellow, Department of Biomedical Informatics, 
+Columbia University Irving Center, New York, NY
+
+2018-2020 			Postdoctoral Scientist, Department of Biomedical Informatics, Columbia University Irving 
+Center, New York, NY
+
+C.	Contributions to Science
+
+
+1.	Post-Marketing Surveillance of Intrauterine Device Safety
+I led a retrospective cohort study about the relative risk of cervical neoplasms among copper and levonorgestrel-releasing intrauterine device users. The analysis was one of the largest post marketing surveillance studies that did a direct comparison of cervical neoplasm risk between Cu-IUD and LNG-IUS users and included data from more than 10,000 women. That study concluded that women who used Copper IUDs (Cu-IUDs) had a lower relative risk of cervical neoplasms than women who used levonorgestrel releasing intrauterine systems (LNG-IUSs) and was published in Obstetrics & Gynecology. The finding that women who used Cu-IUDs had a lower risk of cervical neoplasms than women who used LNG-IUSs was novel and could have profound public health implications.  My interdisciplinary background in Chemistry, Medicine, Public Health and Biomedical Informatics makes me a unique and qualified candidate to continue research about cervical neoplasm risk from IUD use. 
+
+a)	Spotnitz ME, Natarajan K, Ryan PB, Westhoff CL. Relative Risk of Cervical Neoplasms Among Copper and Levonorgestrel-Releasing Intrauterine Device Users. Obstet Gynecol (2020); 135(2):319-327.
+
+2.	Phenotyping on Large Scale Observational Databases
+Electronic phenotyping of patients is an active area of research that is central to characterization, estimation and prediction studies on observational healthcare databases. I have participated in phenotyping over 300 diseases in the Observational Healthcare Data Sciences and Informatics (OHDSI) network.  The phenotypes span multiple organ systems and anatomical regions.  For example, I have made phenotypes for epilepsy, spinal cord neoplasms, cardiac and renal amyloidosis, among other diseases. Presently, I am developing phenotypes for breast cancer, prostate cancer, lung cancer, and multiple myeloma as part of a National Cancer Institute (NCI) grant. Another active research effort is to phenotype patients with Post-Acute Sequelae of SARS-CoV-2 infection (PASC). My broad experiences in medicine and public health have helped me develop phenotypes.
+
+
+
+a)	Spotnitz ME, Natarajan K, Ryan PB, Westhoff CL. Relative Risk of Cervical Neoplasms Among Copper and Levonorgestrel-Releasing Intrauterine Device Users. Obstet Gynecol (2020); 135(2):319-327.
+
+b)	Spotnitz ME, Natarajan K, Hripcsak G, Maurer MS, Radhakrishnan J. (2020 October) Phenotyping Amyloidosis Subtypes in an Observational Database. Observational Health Data Sciences and Informatics Symposium.
+
+c)	Spotnitz ME, Burn E, Hamilton TW, Geller JA, Kostka K, Natarajan K. (2019 September). The Association Between Preoperative 3D Rendering Prior to an Elective Total Knee, Shoulder or Hip Arthroplasty and Postoperative Outcomes: Real World Evidence from the OHDSI Network. Observational Health Data Sciences and Informatics Symposium.
+
+3.	Biventricular Pacing after Cardiac Surgery
+As a medical student, I analyzed data from the NIH-funded Biventricular Pacing after Cardiac Surgery (BiPACS) trial. I was the lead author on two publications. In the first, we investigated whether there was a correlation between decreases in QRS duration and cardiac output for BiPACS patients. We found no correlation overall.  My original contribution to that manuscript was the development of an algorithm that measured QRS duration off of a single EKG lead. The start of the QRS duration was indicated by the first derivative of the EKG tracing and the end of the QRS duration was indicated by the second derivative of the tracing. In a second manuscript, we assessed the hemodynamic stability of BiPACS patients immediately after weaning from cardiopulmonary bypass. We found that biventricular pacing optimization could be applied safely in patients following cardiopulmonary bypass. Additionally, the procedure did not result in harmful hemodynamic perturbation with continuous monitoring of mean arterial pressure and cardiac output.  I led the data analysis for that study. 
+
+a)	Spotnitz ME, Richmond ME, Quinn TA, Cabreriza SE, Wang DY, Albright CM, Weinberg AD, Dizon JM, Spotnitz HM. Relation of QRS shortening to cardiac output during temporary resynchronization therapy after cardiac surgery.  ASAIO J. 2010 Sep-Oct;56(5):434-40
+
+b)	Spotnitz ME, Wang DY, Quinn TA, Richmond ME, Rusanov A, Johnston T, Cheng B, Cabreriza SE, Spotnitz HM. Hemodynamic stability during biventricular pacing after cardiopulmonary bypass. J Cardiothorac Vasc Anesthesia.  2011 Apr;25(2):238-242
+ 
+4.	Dip Coating for the Alignment of Carbon Nanotubes on Curved Surfaces
+In my senior thesis experiment at Harvard College, I investigated a dip coating method to align carbon nanotubes on curved surfaces. The novelty of dip coating was that it was a simple and effective method for controlling nanotube position. Controlling the orientation of carbon nanotubes may help with isolating them for imaging or analysis. That study was published in the Journal of Materials Chemistry and has been cited by more than 80 references.
+
+a)	Spotnitz M, Ryan D, Stone H. Dip coating for the alignment of carbon nanotubes on curved surfaces. Journal of Materials Chemistry. 2004 Apr;14(8):1299-1302.
+
+5.	Design of Quantum Cellular Automata Based Hardware
+While working at the NASA Jet Propulsion Laboratory (JPL), I helped design computer circuits with
+quantum cellular automata hardware.  That work was the subject of multiple technology briefs.
+a)	Fijany A, Toomarian N, Modarres K, Spotnitz M. Compact Interconnection Networks Based on Quantum Dots. NASA Tech Briefs. (2003); 27(1):32.
+ 
+b)	Fijany A, Toomarian N, Modarres K, Spotnitz M. Bit-Serial Adder Based on Quantum Dots. NASA Tech Briefs. (2003) Jan; 27(1): 35.
+ 
+c)	Fijany A, Toomarian N, Spotnitz M. Implementing Permutation Matrices by Use of Quantum Dots. NASA Tech Briefs. (2001) Oct; 25(10):42.
+
+List of Published or Presented Work in MyBibliography:
+[bibliography](https://www.ncbi.nlm.nih.gov/myncbi/matthew.spotnitz.1/bibliography/public/)
