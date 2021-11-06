@@ -9,4 +9,4 @@ output:
 
 # This is Matt's website
 
-Click here to find more information about (about.html) me.
+Click here to find more information [about] (about.html) me.
