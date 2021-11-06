@@ -9,5 +9,5 @@ output:
 
 # This is Matt's website
 
-• [p8105] (https://www.p8105.com) 
-• [about] (about.html)
+• [p8105](https://www.p8105.com) 
+• [about me](about.html)
