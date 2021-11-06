@@ -4,10 +4,9 @@ output:
   html_document:
     toc: true
     toc_float: true
-    theme: cerulean
 ---
 
-##Here are parts of my NIH Biosktech:
+# Here are parts of my NIH Biosktech:
 
 
 A.	Personal Statement
