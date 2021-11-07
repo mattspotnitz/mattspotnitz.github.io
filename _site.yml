@@ -6,7 +6,9 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Plotly"
-      href: plotly.html
+      href: Plotly.html
+    - text: "NOAA Dashboard"
+      href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<mes2165@cumc.columbia.edu>
     - icon: fa-github fa-lg
