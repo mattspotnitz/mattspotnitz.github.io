@@ -5,3 +5,57 @@ output:
     toc: true
     toc_float: true
 ---
+# Examples of Plotly
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(dplyr)
+library(rnoaa)
+library(lubridate)
+library(ggplot2)
+```
+I ran the below code to access the rnoaa data as per the p8105 website instructions. I have since commented it out for efficiency.
+```{r}
+# Get a list of all NY station IDs
+#stations <- ghcnd_stations()
+#nystationids <-  stations %>% 
+#  filter(state == "NY") %>% 
+#  distinct(id)
+
+# Pull the desired weather data for all of these stations
+#nydat <- meteo_pull_monitors(nystationids$id, 
+ #                            date_min = "1981-01-01", 
+  #                           date_max = "2010-12-31", 
+   #                          var = c("PRCP", "SNOW", "SNWD", "TMAX", "TMIN"))
+
+# Save the resulting data
+#save(nystationids, nydat, file = "nynoaadat.RData")
+```
+Now I will load the data. I will remove rows that do not have values for the core variables "prcp", "snow", "snwd", "tmax" or "tmin."
+```{r}
+ny_noaa_dropna = ny_noaa %>% drop_na(prcp, snow, snwd, tmax, tmin) %>% janitor::clean_names()
+str(ny_noaa_dropna)
+#All data are the appropriate formats, except for tmax and tmin, which should be integers. I will convert those.
+
+ny_noaa_clean = ny_noaa_dropna %>% mutate(tmax = as.integer(tmax), tmin = as.integer(tmin))
+str(ny_noaa_clean)
+
+ny_noaa_recent_subzero = ny_noaa_clean %>% mutate(year = year(date)) %>% filter (year > 2000, tmin < 0, tmax< 0)
+str(ny_noaa_recent_subzero)
+#I restricted to recent years and low temperatures to make the dataset more manageable.
+```
+I will do a scatter plot of precipitation and snowfall.
+```{r}
+ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin ºC: ", tmin)) %>% plot_ly(
+    x = ~snow, y = ~prcp, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
+```
+
+I will do a bar plot of weather station id.
+```{r}
+ny_noaa_recent_subzero %>% count(id) %>% 
+  mutate(id = fct_reorder(id, n)) %>% 
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis")
+```
+
