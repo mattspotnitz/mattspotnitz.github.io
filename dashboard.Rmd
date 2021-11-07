@@ -1,0 +1,65 @@
+---
+title: "NOAA Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(dplyr)
+library(rnoaa)
+library(lubridate)
+library(ggplot2)
+
+library(flexdashboard)
+```
+# Data Tidying
+```{r}
+ny_noaa_dropna = ny_noaa %>% drop_na(prcp, snow, snwd, tmax, tmin) %>% janitor::clean_names()
+str(ny_noaa_dropna)
+#All data are the appropriate formats, except for tmax and tmin, which should be integers. I will convert those.
+
+ny_noaa_clean = ny_noaa_dropna %>% mutate(tmax = as.integer(tmax), tmin = as.integer(tmin))
+str(ny_noaa_clean)
+
+ny_noaa_recent_subzero = ny_noaa_clean %>% mutate(year = year(date)) %>% filter (year > 2000, tmin < 0, tmax< 0)
+str(ny_noaa_recent_subzero)
+#I restricted to recent years and low temperatures to make the dataset more manageable.
+```
+
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+# Scatter Plot of Precipitation vs. Snowfall
+
+```{r}
+ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin ºC: ", tmin)) %>% plot_ly(
+    x = ~snow, y = ~prcp, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+# Box Plot of Snow Depth by Weather Station ID.
+
+
+```{r}
+ny_noaa_recent_subzero %>%  
+  plot_ly(y = ~snwd, color = ~id, type = "box", colors = "viridis")
+```
+
+# Bar Plot of Weather Station ID Frequency.
+
+```{r}
+ny_noaa_recent_subzero %>% count(id) %>% 
+  mutate(id = fct_reorder(id, n)) %>% 
+  plot_ly(x = ~id, y = ~n, color = ~id, type = "bar", colors = "viridis")
+```
+
