@@ -47,7 +47,7 @@ ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-# Box Plot of Snow Depth by Weather Station ID.
+# Box Plot of Snow Depth by Weather Station ID
 
 
 ```{r}
@@ -55,7 +55,7 @@ ny_noaa_recent_subzero %>%
   plot_ly(y = ~snwd, color = ~id, type = "box", colors = "viridis")
 ```
 
-# Bar Plot of Weather Station ID Frequency.
+# Bar Plot of Weather Station ID Frequency
 
 ```{r}
 ny_noaa_recent_subzero %>% count(id) %>% 
