@@ -37,11 +37,13 @@ str(ny_noaa_recent_subzero)
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-# Scatter Plot of Precipitation vs. Snowfall
+# Scatter Plot of Snowfall vs. Precipitation
 
 ```{r}
+```{r}
 ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin ºC: ", tmin)) %>% plot_ly(
-    x = ~snow, y = ~prcp, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
+    x = ~prcp, y = ~snow, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
+```
 ```
 
 Column {data-width=350}

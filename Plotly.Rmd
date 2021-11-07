@@ -46,10 +46,10 @@ ny_noaa_recent_subzero = ny_noaa_clean %>% mutate(year = year(date)) %>% filter 
 str(ny_noaa_recent_subzero)
 #I restricted to recent years and low temperatures to make the dataset more manageable.
 ```
-I will do a scatter plot of precipitation vs. snowfall.
+I will do a scatter plot of snowfall vs. precipitation.
 ```{r}
 ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin ºC: ", tmin)) %>% plot_ly(
-    x = ~snow, y = ~prcp, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
+    x = ~prcp, y = ~snow, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
 ```
 
 
