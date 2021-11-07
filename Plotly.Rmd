@@ -46,13 +46,20 @@ ny_noaa_recent_subzero = ny_noaa_clean %>% mutate(year = year(date)) %>% filter 
 str(ny_noaa_recent_subzero)
 #I restricted to recent years and low temperatures to make the dataset more manageable.
 ```
-I will do a scatter plot of precipitation and snowfall.
+I will do a scatter plot of precipitation vs. snowfall.
 ```{r}
 ny_noaa_recent_subzero %>% mutate(text_label = str_c("Tmax ºC: ", tmax, "\nTmin ºC: ", tmin)) %>% plot_ly(
     x = ~snow, y = ~prcp, type = "scatter", mode = "markers", color = ~snwd, text = ~ text_label, alpha = 0.5)
 ```
 
-I will do a bar plot of weather station id.
+
+I will do a box plot of snow depth by weather station id.
+```{r}
+ny_noaa_recent_subzero %>%  
+  plot_ly(y = ~snwd, color = ~id, type = "box", colors = "viridis")
+```
+
+I will do a bar plot of weather station id frequency.
 ```{r}
 ny_noaa_recent_subzero %>% count(id) %>% 
   mutate(id = fct_reorder(id, n)) %>% 
